@@ -203,10 +203,12 @@ public class Game extends Canvas {
           if ((System.currentTimeMillis() - lastFire) < firingInterval || waitingForKeyPress == true){
         	  return;
           } // if
-
+          
+          // player position
           int x = ship.getX() + 43;
           int y = ship.getY() + 75;
           
+          // positions the bullet so it comes out of the gun
           double bulletX = x + (65 * Math.cos(rotation) - 6 * Math.sin(rotation));
           double bulletY = y + (65 * Math.sin(rotation) + 6 * Math.cos(rotation));
           
